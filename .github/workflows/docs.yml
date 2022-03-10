@@ -17,6 +17,9 @@ jobs:
       - name: "npm build"
         run: npm run build
       - name: "npm deploy"
-        run: GIT_USER=sharshi npm run deploy
+        run: npm run deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SOURCE_FOLDER: '.'
+          GIT_USER: sharshi
+          GIT_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+          DEPLOYMENT_BRANCH: gh-pages
