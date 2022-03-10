@@ -17,4 +17,4 @@ jobs:
       - name: "npm build"
         run: npm run build
       - name: "npm deploy"
-        run: npm run deploy
+        run: GIT_USER=sharshi npm run deploy
