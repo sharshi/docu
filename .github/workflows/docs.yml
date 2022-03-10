@@ -16,10 +16,9 @@ jobs:
         run: npm i
       - name: "npm build"
         run: npm run build
-      - name: "npm deploy"
-        run: npm run deploy
-        env:
-          SOURCE_FOLDER: '.'
-          GIT_USER: sharshi
-          GIT_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
-          DEPLOYMENT_BRANCH: gh-pages
+      - uses: ad-m/github-push-action@v0.5.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          force: true
+          directory: ./build
