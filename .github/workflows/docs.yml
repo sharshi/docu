@@ -18,3 +18,5 @@ jobs:
         run: npm run build
       - name: "npm deploy"
         run: GIT_USER=sharshi npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
