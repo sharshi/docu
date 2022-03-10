@@ -12,6 +12,8 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 12.18.3
+      - name: "npm install"
+        run: npm i
       - name: "npm build"
         run: npm run build
       - name: "npm deploy"
