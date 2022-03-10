@@ -37,6 +37,17 @@ const config = {
         },
       }),
     ],
+    [
+      'redocusaurus',
+      {
+        specs: [
+          {
+            routePath: '/api/',
+            spec: './api.yml',
+          },
+      ],
+      }
+    ],
   ],
 
   themeConfig:
@@ -55,7 +66,7 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/api', label: 'API', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
