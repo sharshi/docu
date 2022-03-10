@@ -16,14 +16,8 @@ jobs:
         run: npm i
       - name: "npm build"
         run: npm run build
-      - name: "ls"
-        run: ls
-      - name: "ls build"
-        run: ls ./build
-      - name: "deploy"
-        working-directory: ./build
-      - uses: ad-m/github-push-action@v0.5.0
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          force: true
+          folder: build
