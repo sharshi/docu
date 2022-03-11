@@ -45,6 +45,10 @@ const config = {
             routePath: '/api/',
             spec: './api.yml',
           },
+          {
+            routePath: '/api-v1/',
+            spec: './archive/v1.yml',
+          },
       ],
       }
     ],
